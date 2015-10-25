@@ -1,26 +1,18 @@
 'use strict';
 
-angular.module('starter.controllers', []).controller('DashCtrl', function ($scope) {
-  $scope.cards = [{ name: 'Cat 1', imgSrc: 'http://placekitten.com/200/400' }, { name: 'Cat 2', imgSrc: 'http://placekitten.com/200/400' }, { name: 'Cat 3', imgSrc: 'http://placekitten.com/200/400' }];
+angular.module('starter.controllers', []).controller('DashCtrl', function ($scope, DataSet) {
+  $scope.cards = DataSet.all();
 
   $scope.cardDestroyed = function (index) {
     $scope.cards.splice(index, 1);
   };
 
-  $scope.addCard = function () {
-    var randomNumber = Math.round(Math.random() * 100);
-    var newCard = { name: 'Cat ' + randomNumber, imgSrc: 'http://placekitten.com/200/400' };
-    $scope.cards.unshift(angular.extend({}, newCard));
-  };
-
   $scope.onSwipeRight = function (index) {
     console.log('right');
-    $scope.addCard();
   };
 
   $scope.onSwipeLeft = function (index) {
     console.log('left');
-    $scope.addCard();
   };
 }).controller('ChatsCtrl', function ($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
