@@ -5,15 +5,22 @@ angular.module('starter.controllers', [])
     { name: 'Cat 1', imgSrc: 'http://placekitten.com/200/400' },
     { name: 'Cat 2', imgSrc: 'http://placekitten.com/200/400' },
     { name: 'Cat 3', imgSrc: 'http://placekitten.com/200/400' },
-    { name: 'Cat 4', imgSrc: 'http://placekitten.com/200/400' },
-    { name: 'Cat 5', imgSrc: 'http://placekitten.com/200/400' },
   ];
+
   $scope.cardDestroyed = function(index) {
     $scope.cards.splice(index, 1);
   };
+
+  $scope.addCard = function() {
+    var randomNumber = Math.round(Math.random() * 100);
+    var newCard = { name: `Cat ${randomNumber}`, imgSrc: 'http://placekitten.com/200/400' };
+    $scope.cards.unshift(angular.extend({}, newCard));
+  };
+
   $scope.cardSwiped = function(index) {
-    var newCard = // new card data
-      $scope.cards.push(newCard);
+    //var newCard = // new card data
+      //$scope.cards.push(newCard);
+    $scope.addCard();
   };
 })
 
