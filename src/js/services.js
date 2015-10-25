@@ -1,5 +1,29 @@
 angular.module('starter.services', [])
 
+.factory('DataSet', function() {
+  var dataSet = [
+    {
+      id: 0,
+      name: 'bear',
+      imgSrc: 'http://placebear.com/400/200',
+    }, {
+      id: 1,
+      name: 'cat',
+      imgSrc: 'https://placekitten.com/400/200',
+    }, {
+      id: 1,
+      name: 'bear',
+      imgSrc: 'https://placekitten.com/400/200',
+    },
+  ];
+
+  return {
+    all: function() {
+      return dataSet;
+    },
+  };
+})
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
