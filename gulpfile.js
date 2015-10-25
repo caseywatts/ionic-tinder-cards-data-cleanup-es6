@@ -10,7 +10,7 @@ var babel = require("gulp-babel");
 var plumber = require("gulp-plumber");
 
 var paths = {
-  es6: ['./src/es6/*.js'],
+  es6: ['./src/js/*.js'],
   sass: ['./scss/**/*.scss']
 };
 
