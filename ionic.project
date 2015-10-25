@@ -1,0 +1,13 @@
+{
+  "name": "ionic-tinder-cards-data-cleanup-es6",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "babel",
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
