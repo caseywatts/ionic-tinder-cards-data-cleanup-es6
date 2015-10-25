@@ -1,6 +1,21 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope) {
+  $scope.cards = [
+    { name: 'Cat 1', imgSrc: 'http://placekitten.com/200/400' },
+    { name: 'Cat 2', imgSrc: 'http://placekitten.com/200/400' },
+    { name: 'Cat 3', imgSrc: 'http://placekitten.com/200/400' },
+    { name: 'Cat 4', imgSrc: 'http://placekitten.com/200/400' },
+    { name: 'Cat 5', imgSrc: 'http://placekitten.com/200/400' },
+  ];
+  $scope.cardDestroyed = function(index) {
+    $scope.cards.splice(index, 1);
+  };
+  $scope.cardSwiped = function(index) {
+    var newCard = // new card data
+      $scope.cards.push(newCard);
+  };
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called

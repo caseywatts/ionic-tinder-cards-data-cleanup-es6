@@ -14,7 +14,7 @@ $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
-*/
+ */
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -9081,3 +9081,13 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+.tinder-card-wrapper {
+  height: 80vh;
+  width: 95vw;
+  background-color: pink;
+  text-align: center;
+  border-radius: 30px;
+  border: 1px solid gray;
+  box-shadow: 5px 5px 3px #AAA;
+  position: absolute; }
