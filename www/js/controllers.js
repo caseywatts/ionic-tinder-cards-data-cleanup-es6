@@ -13,9 +13,13 @@ angular.module('starter.controllers', []).controller('DashCtrl', function ($scop
     $scope.cards.unshift(angular.extend({}, newCard));
   };
 
-  $scope.cardSwiped = function (index) {
-    //var newCard = // new card data
-    //$scope.cards.push(newCard);
+  $scope.onSwipeRight = function (index) {
+    console.log('right');
+    $scope.addCard();
+  };
+
+  $scope.onSwipeLeft = function (index) {
+    console.log('left');
     $scope.addCard();
   };
 }).controller('ChatsCtrl', function ($scope, Chats) {

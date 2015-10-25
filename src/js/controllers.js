@@ -17,9 +17,13 @@ angular.module('starter.controllers', [])
     $scope.cards.unshift(angular.extend({}, newCard));
   };
 
-  $scope.cardSwiped = function(index) {
-    //var newCard = // new card data
-      //$scope.cards.push(newCard);
+  $scope.onSwipeRight = function(index) {
+    console.log('right');
+    $scope.addCard();
+  };
+
+  $scope.onSwipeLeft = function(index) {
+    console.log('left');
     $scope.addCard();
   };
 })
