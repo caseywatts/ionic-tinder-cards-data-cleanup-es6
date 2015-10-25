@@ -1,9 +1,11 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
     <td-cards>
-      <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="onSwipeLeft($index)" on-swipe-right="onSwipeRight($index)" class="tinder-card-wrapper">
-          <h3>{{card.name}}</h3>
-          <img src="{{card.imgSrc}}">
+      <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="onSwipeLeft($index)" on-swipe-right="onSwipeRight($index)" class="tinder-card-wrapper card-{{$index}}">
+        <div class='yes-text'>oh yes</div>
+        <h3>{{card.name}}</h3>
+        <img src="{{card.imgSrc}}">
+        <div class='no-text'>oh no</div>
       </td-card>
     </td-cards>
   </ion-content>
