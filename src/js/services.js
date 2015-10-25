@@ -9,11 +9,15 @@ angular.module('starter.services', [])
     }, {
       id: 1,
       name: 'cat',
-      imgSrc: 'https://placekitten.com/400/200',
+      imgSrc: 'http://lorempixel.com/g/300/400/food/',
     }, {
-      id: 1,
-      name: 'bear',
-      imgSrc: 'https://placekitten.com/400/200',
+      id: 2,
+      name: 'cat',
+      imgSrc: 'http://lorempixel.com/g/300/400/cats/',
+    }, {
+      id: 3,
+      name: 'food',
+      imgSrc: 'http://lorempixel.com/g/300/400/food/',
     },
   ];
 
